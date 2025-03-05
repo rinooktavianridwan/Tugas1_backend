@@ -14,7 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
         //
         $middleware->validateCsrfTokens([
             'tokos',
-            'produks'
+            'tokos/*',
+            'produks',
+            'produks/*',
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
