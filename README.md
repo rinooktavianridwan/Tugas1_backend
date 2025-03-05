@@ -67,7 +67,7 @@ Contoh Body :
 
 Endpoint : DELETE /tokos/{id}
 
-### 1. Produk
+### 2. Produk
 - Mendapatkan daftar produk
   
 Endpoint: GET /produks
