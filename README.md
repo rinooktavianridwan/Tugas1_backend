@@ -30,8 +30,14 @@ Dokumentasi ini berisi daftar endpoint API yang tersedia dalam repository. API i
 
 ### 1. Toko
 - Mendapatkan daftar toko
-  
-Endpoint: GET /tokos
+
+Endpoint semua: GET /tokos
+
+Endpoint id: GET /tokos/{id}
+
+- Mendapatkan daftar dan jumlah produk
+
+Endpoint : GET /tokos/jumlahproduks
 
 - Menambahkan toko
 
@@ -70,7 +76,9 @@ Endpoint : DELETE /tokos/{id}
 ### 2. Produk
 - Mendapatkan daftar produk
   
-Endpoint: GET /produks
+Endpoint semua: GET /produks
+
+Endpoint id: GET /produks/{id}
 
 - Menambahkan produk
 
