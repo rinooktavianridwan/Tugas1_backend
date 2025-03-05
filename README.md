@@ -28,8 +28,80 @@ Dokumentasi ini berisi daftar endpoint API yang tersedia dalam repository. API i
 
 ## Endpoint API
 
+### 1. Toko
+- Mendapatkan daftar toko
+  
+Endpoint: GET /tokos
+
+- Menambahkan toko
+
+Endpoint: POST /tokos
+
+Contoh Body : 
+```
+{
+    "nama_toko": "Toko Sumber Rezeki",
+    "pemilik": "Siti Rohmah",
+    "alamat": "Jl. Sudirman No. 45, Bandung",
+    "email": "sumberrezeki@gmail.com",
+    "no_telepon": "082345678901"
+}
+```
+
+- Mengupdate toko
+
+Endpoint: PUT /tokos/{id}
+
+Contoh Body :
+```
+{
+    "nama_toko": "Toko Sumber Rezeki",
+    "pemilik": "Siti Rohmah",
+    "alamat": "Jl. Sudirman No. 50, Bandung",
+    "email": "sumberrezeki@gmail.com",
+    "no_telepon": "082345678901"
+}
+```
+
+- Menghapus toko
+
+Endpoint : DELETE /tokos/{id}
+
 ### 1. Produk
 - Mendapatkan daftar produk
-Endpoint: GET /api/produks
+  
+Endpoint: GET /produks
+
+- Menambahkan produk
+
+Endpoint: POST /produks
+
+Contoh Body : 
+```
+{
+    "toko_id": 1,
+    "nama_produk": "Gula Aren",
+    "harga": 5000,
+    "stok": 50
+  }
+```
+
+- Mengupdate produk
+
+Endpoint: PUT /produks/{id}
+
+Contoh Body :
+```
+{
+    "toko_id": 1,
+    "nama_produk": "Gula Aren",
+    "harga": 5000,
+    "stok": 50
+  }
+```
+
+- Menghapus produk
+
+Endpoint : DELETE /produks/{id}
 
 
