@@ -16,6 +16,14 @@ class TokoController extends Controller
         return response()->json(Toko::all(), 200);
     }
 
+    public function getProdukCount()
+    {
+        $tokos = Toko::withCount('produks')->get(['nama_toko']);
+
+        return response()->json($tokos->makeHidden(['pemilik', 'alamat', 'email', 'no_telepon', 'created_at', 'updated_at']));
+    }
+
+
     /**
      * Store a newly created resource in storage.
      */
@@ -73,7 +81,7 @@ class TokoController extends Controller
         //
         $toko = Toko::find($id);
 
-        if(!$toko){
+        if (!$toko) {
             return response()->json(['message' => 'Toko tidak ditemukan']);
         }
 
