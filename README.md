@@ -29,36 +29,17 @@ Dokumentasi ini berisi daftar endpoint API yang tersedia dalam repository. API i
 ## Endpoint API
 
 ### 1. Toko
-- Mendapatkan daftar toko
 
-Endpoint semua: GET /tokos
+| **Aksi**                         | **Method** |   **Endpoint**            |
+|----------------------------------|------------|---------------------------|
+| **Mendapatkan daftar toko**      |   `GET`    |    `/tokos`               |
+| **Mendapatkan daftar toko {ID}** |   `GET`    |    `/tokos/{id}`          |
+|**Mendapatkan jumlah produk toko**|   `GET`    |    `/tokos/jumlahproduks` |
+| **Menambahkan toko**             |   `POST`   |    `/tokos`               |
+| **Mengupdate toko**              |   `PUT`    |    `/tokos/{id}`          |
+| **Menghapus toko**               |   `DELETE` |    `/tokos/{id}`          |
 
-Endpoint id: GET /tokos/{id}
-
-- Mendapatkan daftar dan jumlah produk
-
-Endpoint : GET /tokos/jumlahproduks
-
-- Menambahkan toko
-
-Endpoint: POST /tokos
-
-Contoh Body : 
-```
-{
-    "nama_toko": "Toko Sumber Rezeki",
-    "pemilik": "Siti Rohmah",
-    "alamat": "Jl. Sudirman No. 45, Bandung",
-    "email": "sumberrezeki@gmail.com",
-    "no_telepon": "082345678901"
-}
-```
-
-- Mengupdate toko
-
-Endpoint: PUT /tokos/{id}
-
-Contoh Body :
+Contoh Body untuk `PUT` dan `POST` :
 ```
 {
     "nama_toko": "Toko Sumber Rezeki",
@@ -69,22 +50,18 @@ Contoh Body :
 }
 ```
 
-- Menghapus toko
-
-Endpoint : DELETE /tokos/{id}
-
 ### 2. Produk
-- Mendapatkan daftar produk
-  
-Endpoint semua: GET /produks
 
-Endpoint id: GET /produks/{id}
+| **Aksi**                           | **Method** |   **Endpoint**            |
+|------------------------------------|------------|---------------------------|
+| **Mendapatkan daftar produk**      |   `GET`    |    `/produks`             |
+| **Mendapatkan daftar produk {ID}** |   `GET`    |    `/produks/{id}`        |
+| **Mendapatkan toko dari produk**   |   `GET`    |    `/produks/{id}/tokos`  |
+| **Menambahkan produk**             |   `POST`   |    `/produks`             |
+| **Mengupdate produk**              |   `PUT`    |    `/produks/{id}`        |
+| **Menghapus produk**               |   `DELETE` |    `/produks/{id}`        |
 
-- Menambahkan produk
-
-Endpoint: POST /produks
-
-Contoh Body : 
+Contoh Body untuk `PUT` dan `POST` :
 ```
 {
     "toko_id": 1,
@@ -93,23 +70,3 @@ Contoh Body :
     "stok": 50
   }
 ```
-
-- Mengupdate produk
-
-Endpoint: PUT /produks/{id}
-
-Contoh Body :
-```
-{
-    "toko_id": 1,
-    "nama_produk": "Gula Aren",
-    "harga": 5000,
-    "stok": 50
-  }
-```
-
-- Menghapus produk
-
-Endpoint : DELETE /produks/{id}
-
-
